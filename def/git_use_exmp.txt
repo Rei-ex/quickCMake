@@ -20,7 +20,7 @@ git checkout --orphan clean-main
 git add .
 
 # 3. Commit current state
-git commit -m "clean version (removed large file history)"
+git commit -m "clean version"
 
 # 4. Replace main with this
 git branch -D main
