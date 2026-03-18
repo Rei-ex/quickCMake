@@ -1,0 +1,30 @@
+
+
+#git use exmp:
+
+git remote add origin git@github.com:Rei-ex/quickCMake.git
+git branch -m main
+git push -u origin main
+
+
+git pull
+# edit code
+git add .
+git commit -m "describe change"
+git push
+
+# 1. Create a new orphan branch (no history)
+git checkout --orphan clean-main
+
+# 2. Add all current files
+git add .
+
+# 3. Commit current state
+git commit -m "clean version (removed large file history)"
+
+# 4. Replace main with this
+git branch -D main
+git branch -m main
+
+# 5. Force push
+git push --force origin main
